@@ -1,0 +1,34 @@
+#postsWithComments {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+#posts {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.post {
+  padding: 20px;
+  margin: 10px;
+  color: gray;
+  background-color: lightgrey;
+}
+
+.post:hover {
+  background-color: white;
+}
+
+.post h2 {
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  #posts {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  #postsWithComments {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

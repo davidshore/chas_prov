@@ -5,6 +5,19 @@
 
 function filterWordsWithLetterA(words) {
   //Din kod här
+  return words.filter((word) => word.indexOf("a") != -1);
+}
+
+function filterWordsWithLetterA2(words) {
+  const wordsWithA = [];
+
+  words.forEach((word) => {
+    if (word.includes("a")) {
+      wordsWithA.push(word);
+    }
+  });
+
+  return wordsWithA;
 }
 
 console.log(filterWordsWithLetterA(["Programming", "is", "great!"])); // ska logga ["Programming", "great!"]

@@ -8,6 +8,15 @@
 
 function howFast(number) {
   //Din kod här
+  if (number >= 100) {
+    return "Fast";
+  } else if (number <= 20) {
+    return "Slow";
+  } else if (number >= 30 && number <= 50) {
+    return "Medium";
+  } else {
+    return "Unknown";
+  }
 }
 
 console.log(howFast(20)); // Ska logga "Slow"

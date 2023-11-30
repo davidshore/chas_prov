@@ -23,8 +23,18 @@ function isEven(num) {
 }
 
 function median(arr) {
-  //Din kod här
+  const sortedArray = sortArray(arr);
+  const even = isEven(sortedArray.length);
+
+  if (even) {
+    const middlePos1 = sortedArray.length / 2 - 1;
+    const middlePos2 = sortedArray.length / 2;
+    return (sortedArray[middlePos1] + sortedArray[middlePos2]) / 2;
+  } else {
+    const middlePos = (sortedArray.length - 1) / 2;
+    return sortedArray[middlePos];
+  }
 }
 
-console.log(median([1, 5, 7, 23, 120])); // ska logga 7
+console.log(median([120, 5, 1, 7, 23])); // ska logga 7
 console.log(median([1, 5, 10, 33])); // ska logga 7.5

@@ -10,6 +10,10 @@ const car = {
 
 function addIsFast(car) {
   // Din kod här
+  return {
+    ...car,
+    isFast: car.speed > 100,
+  };
 }
 console.log(addIsFast(car)); // Ska logga { name: "Volvo", speed: 120, isFast: true }
 
@@ -19,7 +23,9 @@ console.log(addIsFast(car)); // Ska logga { name: "Volvo", speed: 120, isFast: t
 // Returnera den nya arrayen
 
 function combineArrays(arr1, arr2) {
+  const combinedArr = [...arr1, ...arr2];
   // Din kod här
+  return combinedArr;
 }
 
 console.log(combineArrays([1, 2, 3], [4, 5, 6])); // Ska logga [1, 2, 3, 4, 5, 6]

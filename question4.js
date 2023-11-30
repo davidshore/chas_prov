@@ -20,6 +20,15 @@ const shoppingCart = [
 
 function calculateTotalPrice2(shoppingCart, prices) {
   // Din kod här
+  let totalPrice = 0;
+
+  shoppingCart.forEach((product) => {
+    const model = product.model;
+    const price = prices[model];
+
+    totalPrice += price;
+  });
+  return totalPrice;
 }
 
 console.log(calculateTotalPrice2(shoppingCart, modelPrices)); // Ska logga 550

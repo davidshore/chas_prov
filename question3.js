@@ -13,8 +13,22 @@ const products2 = [
   { name: "Drone", brand: "GoPro", model: "Karma", price: 200 },
 ];
 
+// 1. skapa variabel som håller reda på totala priset
+// 2. loopa listan och plocka ut priset för varje produkt.
+// 3. addera varje produkts pris till totala priset.
+// 4. returnera totala priset.
+
+const goPro = { name: "Camera", brand: "GoPro", model: "Hero_4", price: 80 };
+const goProPrice = goPro.price;
+
 function calculateTotalPrice(shoppingCart) {
   // Din kod här
+  let totalPrice = 0;
+
+  shoppingCart.forEach((product) => {
+    totalPrice += product.price;
+  });
+  return totalPrice;
 }
 
 console.log(calculateTotalPrice(products)); // Ska logga 220
